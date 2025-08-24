@@ -6,7 +6,9 @@ from .absorcao import absorcao
 
 
 @click.group()
+@click.version_option(package_name="mtcli-fluxo")
 def fluxo():
+    "Calcula saldos estimados de agressao e de absorcao." ""
     pass
 
 
@@ -14,5 +16,5 @@ fluxo.add_command(agressao, name="agressao")
 fluxo.add_command(absorcao, name="absorcao")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     fluxo()
